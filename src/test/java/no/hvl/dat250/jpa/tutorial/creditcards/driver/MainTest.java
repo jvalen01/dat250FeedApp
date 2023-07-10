@@ -1,6 +1,6 @@
-package no.hvl.dat250.jpa.assignment2.creditcards.driver;
+package no.hvl.dat250.jpa.tutorial.creditcards.driver;
 
-import no.hvl.dat250.jpa.assignment2.creditcards.*;
+import no.hvl.dat250.jpa.tutorial.creditcards.*;
 import org.junit.Before;
 import org.junit.Test;
 

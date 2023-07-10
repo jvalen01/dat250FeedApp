@@ -1,4 +1,4 @@
-package no.hvl.dat250.jpa.assignment2.creditcards;
+package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import java.util.Collection;
 import jakarta.persistence.*;

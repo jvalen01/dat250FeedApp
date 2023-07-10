@@ -1,4 +1,4 @@
-package no.hvl.dat250.jpa.assignment2.basicexample;
+package no.hvl.dat250.jpa.tutorial.basicexample;
 
 import lombok.*;
 

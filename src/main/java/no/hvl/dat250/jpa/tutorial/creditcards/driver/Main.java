@@ -1,4 +1,4 @@
-package no.hvl.dat250.jpa.assignment2.creditcards.driver;
+package no.hvl.dat250.jpa.tutorial.creditcards.driver;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

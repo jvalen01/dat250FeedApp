@@ -1,10 +1,9 @@
-package no.hvl.dat250.jpa.assignment2.creditcards;
+package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
-import java.util.Collection;
 
 @Entity
-public class Bank {
+public class Pincode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,12 +12,12 @@ public class Bank {
         return id;
     }
 
-    public String getName() {
+    public String getCode() {
         // TODO: implement method!
         return null;
     }
 
-    public Collection<CreditCard> getOwnedCards() {
+    public Integer getCount() {
         // TODO: implement method!
         return null;
     }
