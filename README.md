@@ -1,7 +1,11 @@
-# dat250-jpa-examples
+# dat250-jpa-starter
 
-This repository contains two **maven projects** which should be used as a starting point for experiment 1 and 2 of assignment 2.
+TODO: Add tutorial here
+- Todo is an example
+- Relationships is an optional tutorial to get started.
+- Credit cards is the main assignment.
 
-Make sure to import the projects using maven in Eclipse or IntelliJ!
-
-More information about maven can be found [here](https://maven.apache.org/what-is-maven.html).
+Questions:
+- Where is the DB?
+- Show the SQL Schema used in your application.
+- Can you provide the SQl used to create the table **Customer**?
