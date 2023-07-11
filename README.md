@@ -109,7 +109,7 @@ The file `persistence.xml` in `src/main/resources/META-INF` is configured to aut
 
 - Can you find out which database is used and where the database stores it files?
 
-4. Now add the following JUnit test _**JpaTest**_ under `src/test/java`:
+4. Now add the following JUnit test _**JpaTest**_ under `src/test/java` in a new package `no.hvl.dat250.jpa.tutorial.relationshipexample`:
 ```java
 package no.hvl.dat250.jpa.tutorial.relationshipexample;
 
