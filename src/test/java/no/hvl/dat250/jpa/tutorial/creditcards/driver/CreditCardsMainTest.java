@@ -14,7 +14,7 @@ import java.util.Set;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class MainTest {
+public class CreditCardsMainTest {
 
     private EntityManagerFactory factory;
 
