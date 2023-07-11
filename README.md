@@ -109,7 +109,7 @@ The file `persistence.xml` in `src/main/resources/META-INF` is configured to aut
 
 - Can you find out which database is used and where the database stores it files?
 
-3. Now add the following JUnit test _**JpaTest**_ under `src/test/java`:
+4. Now add the following JUnit test _**JpaTest**_ under `src/test/java`:
 ```java
 package no.hvl.dat250.jpa.tutorial.relationshipexample;
 
@@ -218,13 +218,13 @@ public class JpaTest {
     }
 }
 ```
-4. Runn all tests. They should all **succeed**.
+5. Runn all tests. They should all **succeed**.
  
 The `setUp()` method will create a few test entries. After the test entries are created, they will be read/deleted during the tests.
 
 - Where do the getters/setters used in the `setUp()` method come from?
 
-5. The **final project** should look like this:
+6. The **final project** should look like this:
 
 ![Project overview](./structure.png)
 
