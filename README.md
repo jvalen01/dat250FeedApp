@@ -2,6 +2,10 @@
 
 [![Experiment 2 tests](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
 
+1. Activate the automatic tests on commit under the Actions tab. 
+2. **Make sure that the test suite located under src/test/java runs successfully after your implementation!**
+3. A green tick should appear next to your commit in the GitHub repository since test cases are executed upon code changes. You can check those runs under the Actions tab.
+
 # JPA tutorial
 
 1. The class **_Main_** should run and terminate without errors. Make sure you have imported the maven project defined in the `pom.xml`.
