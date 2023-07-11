@@ -1,3 +1,7 @@
+# Experiment 2 tests
+
+[![Experiment 2 tests](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
+
 # JPA tutorial
 
 1. The class **_Main_** should run and terminate without errors. Make sure you have imported the maven project defined in the `pom.xml`.
