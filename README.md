@@ -9,7 +9,8 @@
 # JPA tutorial
 
 1. The class **_Main_** should run and terminate without errors. Make sure you have imported the maven project defined in the `pom.xml`.
-2. Create the following three classes **Family**, **Job**, and **Person**:
+2. Create a new package `relationshipexample` under `no.hvl.dat250.jpa.tutorial`.
+3. Create the following three classes **Family**, **Job**, and **Person** in the new package:
 
 ```java
 package no.hvl.dat250.jpa.tutorial.relationshipexample;
