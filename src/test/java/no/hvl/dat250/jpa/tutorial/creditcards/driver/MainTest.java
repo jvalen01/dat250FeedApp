@@ -20,13 +20,13 @@ public class MainTest {
 
     @Before
     public void setUp() {
-        factory = Persistence.createEntityManagerFactory(Main.PERSISTENCE_UNIT_NAME);
+        factory = Persistence.createEntityManagerFactory(CreditCardsMain.PERSISTENCE_UNIT_NAME);
     }
 
     @Test
     public void testDomainModelPersistence() {
         // Run the main class to persist the objects.
-        Main.main(new String[]{});
+        CreditCardsMain.main(new String[]{});
 
         EntityManager em = factory.createEntityManager();
 
