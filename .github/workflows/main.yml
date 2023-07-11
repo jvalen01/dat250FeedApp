@@ -1,4 +1,4 @@
-name: Run JPA assignment tests
+name: Experiment 2 tests
 
 on: [push]
 
@@ -13,5 +13,5 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Test JPA assignment
+      - name: Test experiment 2
         run: mvn --batch-mode --update-snapshots verify
