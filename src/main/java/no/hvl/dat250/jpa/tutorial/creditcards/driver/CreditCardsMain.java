@@ -6,7 +6,7 @@ import jakarta.persistence.Persistence;
 
 public class CreditCardsMain {
 
-  static final String PERSISTENCE_UNIT_NAME = "jpa-example";
+  static final String PERSISTENCE_UNIT_NAME = "jpa-tutorial";
 
   public static void main(String[] args) {
     try (EntityManagerFactory factory = Persistence.createEntityManagerFactory(
