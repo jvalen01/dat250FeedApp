@@ -107,7 +107,7 @@ public class Person {
 ```
 The file `persistence.xml` in `src/main/resources/META-INF` is configured to automatically map them to database tables using **[Hibernate](https://hibernate.org/orm/)**. Have a look at the `persistence.xml` and try to roughly understand its content.
 
-- Can you find out which database is used and where the database stores it files?
+- Can you find out which database is used and where the database stores its files?
 
 4. Now add the following JUnit test _**JpaTest**_ under `src/test/java` in a new package `no.hvl.dat250.jpa.tutorial.relationshipexample`:
 ```java
@@ -218,7 +218,7 @@ public class JpaTest {
     }
 }
 ```
-5. Runn all tests. They should all **succeed**.
+5. Run all tests. They should all **succeed**.
  
 The `setUp()` method will create a few test entries. After the test entries are created, they will be read/deleted during the tests.
 
