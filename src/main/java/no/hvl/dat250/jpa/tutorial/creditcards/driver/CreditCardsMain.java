@@ -25,7 +25,7 @@ public class CreditCardsMain {
   }
 
   private static void createObjects(EntityManager em) {
-    // Create and persist a customer
+    // Create and persist a customer and address
     Customer customer = new Customer();
     customer.setName("Max Mustermann");
     em.persist(customer);
@@ -34,7 +34,7 @@ public class CreditCardsMain {
     address.setStreet("Inndalsveien");
     address.setNumber(28);
 
-    // Managing the bi-directional relationship between Customer and Address
+    // Here I am managing the bi-directional relationship between Customer and Address
     customer.getAddresses().add(address);
     address.getOwners().add(customer);
 
@@ -47,7 +47,7 @@ public class CreditCardsMain {
 
     Bank bank = new Bank();
     bank.setName("Pengebank");
-    em.persist(bank);  // It's often beneficial to persist entities early, especially if they're referenced by others
+    em.persist(bank);
 
     // Create first credit card
     CreditCard creditCard1 = new CreditCard();
@@ -73,8 +73,11 @@ public class CreditCardsMain {
     // Managing the uni-directional relationship between Customer and CreditCard
     customer.getCreditCards().add(creditCard1);
     customer.getCreditCards().add(creditCard2);
-    em.merge(customer);
+    em.merge(customer); //Merge customer.
+
   }
+
+
 
 
 }

@@ -19,3 +19,11 @@ create table Customer (
     name varchar(255),
     primary key (id)
 )
+
+
+# Technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved:
+- Didnt manage to view database schema. 
+
+# An explanation of how you inspected the database tables and what tables were created:
+
+I set the hibernate.show_sql in persistence.xml to true to see the sql that created the database tables. 
