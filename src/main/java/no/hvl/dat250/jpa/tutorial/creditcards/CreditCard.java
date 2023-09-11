@@ -1,6 +1,11 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class CreditCard {
@@ -9,28 +14,47 @@ public class CreditCard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Integer getNumber() {
-        // TODO: implement method!
-        return null;
-    }
+    @Setter
+    @Getter
+    private Integer number;
 
-    public Integer getBalance() {
-        // TODO: implement method!
-        return null;
-    }
+    @Setter
+    @Getter
+    private Integer creditLimit;
 
-    public Integer getCreditLimit() {
-        // TODO: implement method!
-        return null;
-    }
+    @Setter
+    @Getter
+    private Integer balance;
 
-    public Pincode getPincode() {
-        // TODO: implement method!
-        return null;
-    }
+    @Setter
+    @Getter
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Pincode pincode;
+
+    @Setter
+    @Getter
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Bank bank;
 
     public Bank getOwningBank() {
-        // TODO: implement method!
-        return null;
+        return bank;
     }
+
+    public void setOwningBank(Bank bank) {
+        this.bank = bank;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CreditCard that = (CreditCard) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
 }

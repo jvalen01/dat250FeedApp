@@ -1,7 +1,10 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
-import java.util.Collection;
+import java.util.*;
+
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 public class Address {
@@ -9,18 +12,35 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public String getStreet() {
-        // TODO: implement method!
-        return null;
+    @Setter
+    @Getter
+    private String street;
+
+    @Setter
+    @Getter
+    private Integer number;
+
+    @ManyToMany(mappedBy = "addresses")
+    private Set<Customer> customers = new HashSet<>();
+
+    public Set<Customer> getOwners() {
+        return customers;
     }
 
-    public Integer getNumber() {
-        // TODO: implement method!
-        return null;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Address address = (Address) o;
+        return Objects.equals(id, address.id);
     }
 
-    public Collection<Customer> getOwners() {
-        // TODO: implement method!
-        return null;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public void setOwners(Set<Customer> ownersList) {
+        this.customers = ownersList;
     }
 }
