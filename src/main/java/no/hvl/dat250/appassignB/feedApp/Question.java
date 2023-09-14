@@ -1,12 +1,10 @@
 package no.hvl.dat250.appassignB.feedApp;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,6 +13,7 @@ import java.util.List;
 public class Question {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String question;
@@ -29,6 +28,12 @@ public class Question {
     private Poll poll;
 
     @OneToMany(mappedBy = "question")
-    private List<Vote> votes;
+    private List<Vote> votes = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return this.question;
+    }
+
 
 }

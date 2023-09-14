@@ -1,8 +1,6 @@
 package no.hvl.dat250.appassignB.feedApp;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,11 +10,22 @@ import lombok.Setter;
 public class Vote {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Boolean answer;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Question question;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private IoTDevice ioTDevice;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private User user;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Voter voter;
+
 
 }

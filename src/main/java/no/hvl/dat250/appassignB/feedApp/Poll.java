@@ -1,11 +1,10 @@
 package no.hvl.dat250.appassignB.feedApp;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,6 +14,7 @@ public class Poll {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -24,6 +24,12 @@ public class Poll {
     private String accessMode;
 
     @OneToMany(mappedBy = "poll")
-    private List<Question> questions;
+    private List<Question> questions = new ArrayList<>();
+
+    @OneToMany(mappedBy = "poll")
+    private List<IoTDevice> ioTDevices = new ArrayList<>();
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private User user;
 
 }

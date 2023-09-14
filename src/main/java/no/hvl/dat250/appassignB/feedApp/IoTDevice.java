@@ -1,13 +1,18 @@
 package no.hvl.dat250.appassignB.feedApp;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
+@Entity
 public class IoTDevice {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -15,4 +20,12 @@ public class IoTDevice {
     private Integer identifier;
 
     private Boolean status;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Poll poll;
+
+    @OneToMany(mappedBy = "ioTDevice")
+    private List<Vote> votes = new ArrayList<>();
+
+
 }
